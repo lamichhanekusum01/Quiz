@@ -1,0 +1,124 @@
+/* Kusum Lamichhane
+    Student ID: C0917362*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #000000, #ffffff); 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+.quiz-container {
+    width: 800px;
+	
+   
+}
+
+.question {
+    background-color: black; 
+    padding: 20px;
+    padding-left: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.options {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.options li {
+    background-color: black; 
+    margin: 5px 0;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.options li:hover {
+    background-color: grey;
+}
+
+/*  Highlighting correct answer */
+.options li.correct {
+    background-color: #42e342;
+    width: 97.3%;
+    color: #ffffff;
+    border-radius: 5px;
+    animation: blink 1s infinite; /* 1s duration, infinite loop */
+}
+
+/* Style for highlighting incorrect answer */
+.options li.incorrect {
+    background-color: #ff0000;
+    width: 97.3%;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Style for radio buttons */
+.options li input[type="radio"] {
+    display: none;
+}
+
+.options li label {
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Style for Animation for highlighting correct ans */
+.options li input[type="radio"]:checked + label.correct {
+    background-color: #42e342;
+    width: 97.3%;
+    color: #ffffff;
+    border-radius: 5px;
+    animation: blink 1s infinite; /* 1s duration, infinite loop */
+}
+
+/* Style for Animation for highlighting incorrect ans */
+.options li input[type="radio"]:checked + label.incorrect {
+    background-color: #ff0000;
+    width: 97.3%;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Style for animation to fade in if windows is reload*/
+.question {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.question.show {
+    opacity: 1;
+}
+.options li label:focus {
+    outline: 2px solid #4caf50;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px){
+    .quiz-container {
+        grid-template-columns: 1fr;
+    }   
+}
+
+
+label{
+    width: 100%;
+}

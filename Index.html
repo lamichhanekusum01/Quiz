@@ -1,0 +1,50 @@
+<!-- Kusum Lamichhane
+    Student ID: C0917362 -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz 6 and 7</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="quiz-container" data-correct="3">
+            <div class="question">
+                <p class="question-text">What is the capital city of Nepal?</p>
+                <ol type="A" class="options">
+                    <li data-option="1"><input type="radio" name="q1" id="q1-a1" onchange="showanswer(false)">
+                        <label class="incorrect"  for="q1-a1"> Berlin</label>
+                    </li>
+                    <li data-option="2"><input type="radio" name="q1" id="q1-a2" onchange="showanswer(false)">
+                        <label class="incorrect"  for="q1-a2"> London</label>
+                    </li>
+                    <li data-option="3"><input type="radio" name="q1" id="q1-a3" onchange="showanswer(true)">
+                        <label class="correct" for="q1-a3"> Kathmandu</label>
+                    </li>
+                    <li data-option="4"><input type="radio" name="q1" id="q1-a4" onchange="showanswer(false)">
+                        <label class="incorrect" for="q1-a4"> Rome</label>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    
+        <script>
+            window.onload = function() {
+                document.querySelector('.question').classList.add('show');
+            };
+             function showanswer(Iscorrect)
+             {
+                if(Iscorrect)
+                {
+                    alert("You have entered the correct answer")
+                }
+                else{
+                    alert("You have entered the incorrect answer")
+                }
+             }
+
+        </script>
+    </body>
+    </html>
+     
